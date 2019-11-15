@@ -3,35 +3,30 @@
   height: 155px;
   background-color: #f25a70;
   border-radius: 10px;
-  margin: 30px;
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  float: left;
+  position: relative;
 }
 
-.memory-card.-squareCircle {
+.memory-card.-front {
   background-color: #fff;
-  position: relative;
-  z-index: -2;
-  float: left;
 }
-.-squareCircle::after {
+.memory-card.-front::before {
   content: "";
   background-color: #d4d4d4;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   position: absolute;
-  bottom: 25px;
-  z-index: -1;
 }
-.icon {
+.memory-card > .icon {
   width: 100px;
   height: 100px;
 }
-.icon.-circle {
+.memory-card.-front > .icon {
   position: absolute;
-  top: 24px;
+  transform: translateY(-12px);
 }
