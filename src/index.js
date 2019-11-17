@@ -1,5 +1,6 @@
 const $root = document.querySelector("#root");
-const $memoryCard = document.createElement("article");
+const $containerPlay = document.createElement("div");
+const $memoryCard1 = document.createElement("article");
 const $memoryCardFront = document.createElement("article");
 const $memoryCard2 = document.createElement("article");
 const $memoryCard3 = document.createElement("article");
@@ -71,47 +72,47 @@ const $icon9 = `
   src='/img/icon-collabcode.png' 
   alt='gueio mascote da Collab Code'
   />`;
-$root.insertBefore($memoryCard, null);
-$memoryCard.classList.add("memory-card");
-$memoryCard.insertAdjacentHTML("afterBegin", $icon);
+$root.insertBefore($containerPlay, null);
+$containerPlay.classList.add("container-play");
+
+//-------------
+$containerPlay.insertBefore($memoryCard1, null);
+$memoryCard1.classList.add("memory-card");
+$memoryCard1.insertAdjacentHTML("afterBegin", $icon);
 // ------------
-$root.insertBefore($memoryCardFront, $memoryCard);
+$containerPlay.insertBefore($memoryCardFront, $memoryCard1);
 $memoryCardFront.classList.add("memory-card");
 $memoryCardFront.classList.add("-front");
 $memoryCardFront.insertAdjacentHTML("afterBegin", $iconc);
 //-------------
-$root.insertBefore($memoryCard2, null);
+$containerPlay.insertBefore($memoryCard2, null);
 $memoryCard2.classList.add("memory-card");
 $memoryCard2.insertAdjacentHTML("afterBegin", $icon2);
 //-------------
-$root.insertBefore($memoryCard3, null);
+$containerPlay.insertBefore($memoryCard3, null);
 $memoryCard3.classList.add("memory-card");
 $memoryCard3.insertAdjacentHTML("afterBegin", $icon3);
 //-------------
-$root.insertBefore($memoryCard4, null);
+$containerPlay.insertBefore($memoryCard4, null);
 $memoryCard4.classList.add("memory-card");
 $memoryCard4.insertAdjacentHTML("afterBegin", $icon4);
 //-------------
-$root.insertBefore($memoryCard5, null);
+$containerPlay.insertBefore($memoryCard5, null);
 $memoryCard5.classList.add("memory-card");
 $memoryCard5.insertAdjacentHTML("afterBegin", $icon5);
 //-------------
-$root.insertBefore($memoryCard6, null);
+$containerPlay.insertBefore($memoryCard6, null);
 $memoryCard6.classList.add("memory-card");
 $memoryCard6.insertAdjacentHTML("afterBegin", $icon6);
 //-------------
-$root.insertBefore($memoryCard7, null);
+$containerPlay.insertBefore($memoryCard7, null);
 $memoryCard7.classList.add("memory-card");
 $memoryCard7.insertAdjacentHTML("afterBegin", $icon7);
 //-------------
-$root.insertBefore($memoryCard8, null);
+$containerPlay.insertBefore($memoryCard8, null);
 $memoryCard8.classList.add("memory-card");
 $memoryCard8.insertAdjacentHTML("afterBegin", $icon8);
 //-------------
-$root.insertBefore($memoryCard9, null);
+$containerPlay.insertBefore($memoryCard9, null);
 $memoryCard9.classList.add("memory-card");
 $memoryCard9.insertAdjacentHTML("afterBegin", $icon9);
-//-------------
-$root.insertBefore($memoryCard10, null);
-$memoryCard10.classList.add("memory-card");
-$memoryCard10.insertAdjacentHTML("afterBegin", $icon10);

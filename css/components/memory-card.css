@@ -1,18 +1,29 @@
+.container-play {
+  width: 375px;
+  height: 667px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  padding-top: 8px;
+  padding-bottom: 18px;
+}
 .memory-card {
-  width: 155px;
-  height: 155px;
+  width: 120px;
+  height: 120px;
   background-color: #f25a70;
   border-radius: 10px;
-  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   position: relative;
+  float: left;
+  margin: 8px 15px 8px 15px;
 }
 
 .memory-card.-front {
   background-color: #fff;
+  float: left;
 }
 .memory-card.-front::before {
   content: "";
@@ -23,8 +34,8 @@
   position: absolute;
 }
 .memory-card > .icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .memory-card.-front > .icon {
   position: absolute;
