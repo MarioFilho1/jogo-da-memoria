@@ -1,12 +1,3 @@
-.container-play {
-  width: 375px;
-  height: 667px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-40%);
-  padding-top: 8px;
-  padding-bottom: 18px;
-}
 .memory-card {
   width: 120px;
   height: 120px;
