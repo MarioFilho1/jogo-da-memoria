@@ -1,16 +1,12 @@
-const createMemoryCard = condição => {
-  if (condição == 1) {
-    return `<article class="memory-card">
-            <img class="icon" src="/img/icon-collabcode.png"
-            alt="Icone do mascote da Collab Code"
-            onClick ="handleClick()"/></article>`;
-  } else {
-    return `<article class="memory-card -front">
-            <img class="icon" src="/img/icon-c.png"
-            alt="icone de um livro linguagem c++"
-             onClick ="handleClick()"/></article>`;
-  }
-};
-function handleClick() {
-  return console.log("ae");
-}
+const createMemoryCard = (src, alt, nameclass) => `
+<article class="memory-card ${nameclass}">
+  <img
+     src="${src}" 
+     alt="${alt}" 
+    class="icon"   
+    onClick ="handleClick()"
+  />
+</article>
+`;
+
+const handleClick = () => console.log("ae");
