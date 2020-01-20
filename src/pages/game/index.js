@@ -1,10 +1,16 @@
 const $root = document.querySelector("#root");
+const $head = document.querySelector("head");
+const $style = document.createElement("style");
+
 const $cardsWrapper = createCardsWrapper();
+
+cardsStyle();
 
 const $memoryCard = createMemoryCard({
   src: "img/icon-collabcode.png",
   alt: "Icone Geio mascote da Collab Code"
 });
+
 const $memoryCardLingC = createMemoryCard({
   src: "img/icon-c.png",
   alt: "Icone livro linguagem c++",
@@ -20,6 +26,7 @@ const $memoryCardLingJs = createMemoryCard({
   alt: "Icone livro linguagem Javascript",
   nameclass: "-front"
 });
+$head.insertBefore($style, null);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardLingJs);
