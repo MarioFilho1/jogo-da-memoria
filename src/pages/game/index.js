@@ -1,38 +1,49 @@
 const $root = document.querySelector("#root");
-const $head = document.querySelector("head");
-const $style = document.createElement("style");
-
 const $cardsWrapper = createCardsWrapper();
+const createMemoryCard = memoryCard();
 
-cardsStyle();
-
-const $memoryCard = createMemoryCard({
-  src: "img/icon-collabcode.png",
-  alt: "Icone Geio mascote da Collab Code"
-});
-
-const $memoryCardLingC = createMemoryCard({
-  src: "img/icon-c.png",
-  alt: "Icone livro linguagem c++",
-  nameclass: "-front"
-});
-const $memoryCardPhone = createMemoryCard({
-  src: "img/icon-celular.png",
-  alt: "Icone livro celular",
-  nameclass: "-front"
-});
-const $memoryCardLingJs = createMemoryCard({
+const $memoryCardJS = createMemoryCard({
+  nameClass: "-front",
   src: "img/icon-js.png",
-  alt: "Icone livro linguagem Javascript",
-  nameclass: "-front"
+  alt: "icone de um livro em linguagem javascript",
+  srcFront: "img/icon-collabcode.png",
+  altFront: "icone do gueio mascote collabcode",
 });
-$head.insertBefore($style, null);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardLingJs);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardLingJs);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhone);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPhone);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardLingC);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardLingC);
+
+const $memoryCardWoman = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-woman.png",
+  alt: "icone mulher codando",
+  srcFront: "img/icon-collabcode.png",
+  altFront: "icone do gueio mascote collabcode",
+});
+const $memoryCardC = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-c.png",
+  alt: "icone de um livro em linguagem C++",
+  srcFront: "img/icon-collabcode.png",
+  altFront: "icone do gueio mascote collabcode",
+});
+const $memoryCardCelular = createMemoryCard({
+  nameClass: "-front",
+  src: "img/icon-celular.png",
+  alt: "icone de um celular",
+  srcFront: "img/icon-collabcode.png",
+  altFront: "icone do gueio mascote collabcode",
+});
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+// $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardWoman);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCelular);
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCelular);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardWoman);
+
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
