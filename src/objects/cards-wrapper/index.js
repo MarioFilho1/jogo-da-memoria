@@ -9,10 +9,9 @@ function createCardsWrapper() {
       flex-wrap: wrap;
       justify-content: space-around;
       padding-top: 10px;
-      perspective: 1000px;
-       
+            
     }
-    .cards-wrapper > .flipper > .memory-card {
+    .cards-wrapper > .memory-card {
       margin-bottom: 10px;
     }`;
 
