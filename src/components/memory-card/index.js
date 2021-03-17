@@ -1,3 +1,10 @@
+let posicaoCard = [1];
+let comparadorCard = [1];
+let acertou = 0;
+let errou = 0;
+let i = 0;
+let t = 0;
+
 const memoryCard = () => {
   const $head = document.querySelector("head");
   const $style = document.createElement("style");
@@ -67,8 +74,8 @@ const memoryCard = () => {
 
   $head.insertBefore($style, null);
 
-  return ({ src, alt }) => `
-    <div class="memory-card" onClick = "handleClick(this)">
+  return ({ src, alt, comparador }) => `
+   <div class="memory-card" onClick = "handleClick(this,comparador=${comparador})">
       <article class="card -front">        
         <img
           src="${src}"
@@ -87,28 +94,39 @@ const memoryCard = () => {
 `;
 };
 
-let i = 0;
-let posicaoCard = [1];
-const handleClick = ($componentes) => {
-  if (i <= 1) {
-    posicaoCard[i] = $componentes;
-    posicaoCard[i].classList.toggle("-active");
-    i++;
+
+const handleClick = ($componentes, comparador) => {
+  if (qtdActiveMemoryCard <= 8 && t <=1) {
+  console.log(qtdActiveMemoryCard)
+    $componentes.classList.toggle("-active");
+    posicaoCard[i]= $componentes
+    comparadorCard[i] = comparador;
+    i++;  
+    t++;  
   }
-  if (i > 1) {
-    var counter = 0;
-    var timer = setInterval(function () {
-      if (counter >= 2) {
-        clearInterval(timer);
+  if (qtdActiveMemoryCard % 2 != 0) {
+    if (comparadorCard[0] == comparadorCard[1]) {
+      acertou = acertou +1;
+      console.log("VOCÊ ACERTOU", acertou);
+      console.log("testando essa bosta")
+      i = 0;
+      t = 0;
+    } else {
+      errou = errou +1;
+      console.log("VOCÊ ERROU", errou);      
+      setTimeout(() => {
+        //const $activeMemoryCards = document.querySelectorAll(
+        //  ".memory-card.-active"
+        //);
+
+        //$activeMemoryCards.forEach(($memoryCard, key) => {
+        //  $memoryCard.classList.remove("-active");
         for (cont = 1; cont >= 0; cont--) {
-          posicaoCard[cont].classList.remove("-active");
-        }
-        i = 0;
-        return;
-      }
-      console.log(counter++);
-    }, 800);
-  } else {
-    return;
+          posicaoCard[cont].classList.remove("-active");          
+          i = 0;
+          t = 0;
+        };
+      }, 1200);
+    }
   }
 };
